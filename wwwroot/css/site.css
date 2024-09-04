@@ -1,0 +1,48 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+body {
+    padding: 1em;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+    color: navy;
+    font-size: calc(1.375rem + 1.5vw);
+}
+
+label {
+    display: inline-block;
+    width: 10em;
+    padding-right: 1em;
+}
+
+div {
+    margin-bottom: .5em
+}
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+button {
+    color:Background gray;
+    cursor: pointer;
+
+}

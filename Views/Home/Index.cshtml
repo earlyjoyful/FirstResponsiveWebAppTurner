@@ -1,0 +1,38 @@
+﻿@model FirstResponsiveWebAppModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <main class="container">
+     <container>
+    <h1>Birthday Calculator</h1>
+    <form asp-action="Index" method="post">
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">Name: </label> 
+            <input asp-for="Name" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="BirthYear" class="form-label">Birth Year: </label>
+            <input asp-for="BirthYear" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Age this year:</label>
+            <input value="@ViewBag.BirthYear" readonly />
+        </div>
+        <button type="submit" class="btn btn-primary p-3 me-2">Calculate</button>
+        <button><a asp-action="Index" class="btn btn-outline-secondary">Clear</a></button>
+    </form>
+    </container>
+    </main>
+</body>
+</html>
