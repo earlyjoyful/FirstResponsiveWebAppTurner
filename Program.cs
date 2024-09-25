@@ -27,8 +27,22 @@ namespace FirstResponsiveWebAppTurner
             app.UseAuthorization();
 
             app.MapControllerRoute(
+                name: "paging_and_sorting",
+                pattern: "{controller}/{action}/{id}/page{num}/sort-by-{sortby}");
+
+            app.MapControllerRoute(
+                name: "paging",
+                pattern: "{controller}/{action}/{id}/page{num}");
+            app.MapAreaControllerRoute(
+                name: "admin",
+                areaName: "Admin",
+                pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
+            app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+
 
             app.Run();
         }
